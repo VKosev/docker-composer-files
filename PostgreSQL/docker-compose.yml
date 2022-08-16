@@ -2,13 +2,15 @@ version: '3.8'
 
 services: 
   postgresSQLDatabase:
-      image: "postgres"
+      image: postgres:latest
+      container_name: postgresDB
       volumes: 
        - postgresVolume:/var/lib/postgresql/data/
-      restart: no
+      restart: always
       environment:
         POSTGRES_PASSWORD: root
-        POSTGRES_DB: kosev
+        POSTGRES_USER: kosev
+        POSTGRES_DB: anonimno_bg
       ports: 
        - 5432:5432
 volumes:

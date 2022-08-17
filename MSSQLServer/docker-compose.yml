@@ -1,0 +1,18 @@
+version: '3.8'
+
+services: 
+  SQLServerDatabase:
+      image: mcr.microsoft.com/mssql/server:2019-latest
+      container_name: sql_server
+      volumes: 
+       - sqlServerVolume:/var/lib/mssqlql/data/
+      restart: always
+      environment:
+        SA_PASSWORD: root
+        ACCEPT_EULA: "Y"
+      ports: 
+       - 1433:1433
+volumes:
+  sqlServerVolume:
+      name: sql_server_volume
+      external: false

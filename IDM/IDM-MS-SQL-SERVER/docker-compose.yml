@@ -18,4 +18,4 @@ volumes:
       external: false
 
 # Script to execute for database creation
-# docker exec -it sql-server /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P myPrimeRootP4sw! -Q "CREATE DATABASE idm; ALTER DATABASE idm SET ALLOW_SNAPSHOT_ISOLATION ON; ALTER DATABASE idm SET READ_COMMITTED_SNAPSHOT ON"
+# docker exec -it idm-sql-server /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P myPrimeRootP4sw! -Q "CREATE DATABASE idm; ALTER DATABASE idm SET ALLOW_SNAPSHOT_ISOLATION ON; ALTER DATABASE idm SET READ_COMMITTED_SNAPSHOT ON"

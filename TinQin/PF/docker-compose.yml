@@ -10,10 +10,10 @@ services:
       environment:
         POSTGRES_USER: kosev
         POSTGRES_PASSWORD: root
-        POSTGRES_DB: oav_local
+        POSTGRES_DB: pf_local
       ports: 
-       - 5432:5432
+       - 5433:5432
 volumes:
   postgresVolume:
-      name: postgres_volume
+      name: postgres_pf_volume
       external: false

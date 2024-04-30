@@ -2,11 +2,17 @@ version: '3.8'
 
 services: 
   rabbitmq:
-      image: rabbitmq:3-management-alpine
+      image: masstransit/rabbitmq:latest
       container_name: rabbitmq_oav
       volumes: 
        - rabbitmq_data:/var/lib/rabbitmq/
       restart: always
+      environment:
+        RABBITMQ_MANAGEMENT_UI: 'true'
+        # RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+        RABBITMQ_DEFAULT_USER: "kosev"
+        RABBITMQ_DEFAULT_PASS: "root"
+        RABBITMQ_DEFAULT_VHOST: "/"
       ports:
         - 5672:5672
         - 15672:15672

@@ -12,7 +12,7 @@ services:
         POSTGRES_PASSWORD: root
         POSTGRES_DB: oav_local
       ports: 
-       - 5432:5432
+       - 5434:5432
 volumes:
   postgresVolume:
       name: postgres_oav_volume
